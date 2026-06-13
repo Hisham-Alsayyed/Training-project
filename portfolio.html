@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hisham Alsayed | Full-Stack Developer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  
+</head>
+
+<body>
+<link rel="stylesheet" href="style.css">
+  
+
+  <div class="theme-toggle-wrap">
+    <i class="fa-solid fa-sun toggle-icon" id="toggle-icon"></i>
+    <label class="toggle-switch" title="تبديل الوضع الليلي">
+      <input type="checkbox" id="themeToggle" />
+      <span class="toggle-slider"></span>
+    </label>
+    <span class="toggle-label" id="toggle-label">فاتح</span>
+  </div>
+
+
+
+  <section class="hero text-center">
+    <div class="container position-relative" style="z-index:1;">
+
+    
+      <div class="fade-in-on-load">
+        <div class="profile-wrap">
+          <div class="profile-ring"></div>
+          <img
+            src="image/icon.png"
+            alt="صورة hisham alsayed"
+            class="profile-img"
+          />
+        </div>
+      </div>
+
+      <div class="fade-in-on-load">
+        <h1 class="hero-name">هشام السيد محمود</h1>
+        <p class="hero-title">Full-Stack Developer · UI/UX Designer · Technical support</p>
+        <p class="hero-bio">
+          أبني تجارب ويب استثنائية تجمع بين الأداء العالي والجماليات العصرية.
+          شغوف بالكود النظيف، والتصميم الهادف، والحلول التقنية التي تحدث فرقاً حقيقياً.
+        </p>
+
+      <div class="fade-in-on-load">
+        <div class="social-links">
+          <a href="https://github.com/Hisham-Alsayyed" target="_blank" class="social-btn btn-github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/hisham-alsayyed-8071282b2" target="_blank" class="social-btn btn-linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a href="https://wa.me/0936472476" target="_blank" class="social-btn btn-email">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="fade-in-on-load">
+        <div class="scroll-cue">
+          <span>اكتشف المشاريع</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  
+  <section class="section section-alt" id="projects">
+    <div class="container">
+
+      <div data-aos="fade-up">
+        <p class="section-eyebrow">Portfolio</p>
+        <h2 class="section-title">المشاريع</h2>
+        <p class="section-subtitle">ثلاثة مشاريع تعكس تنوع تقني حقيقي — من تطبيقات الموبايل إلى منصات الويب المدعومة بالذكاء الاصطناعي.</p>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card h-100">
+            <div class="card-img-wrap">
+              <img
+                src="image/logo.png"
+                alt="simpleCalc"
+              />
+              <div class="card-img-overlay-tint" style="background: linear-gradient(135deg,#7c6ff7,#5fb8ff);"></div>
+              <div class="card-icon-badge" style="background: linear-gradient(135deg,#7c6ff7,#5fb8ff);">
+                <i class="fas fa-mobile-screen"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-project-number">PROJECT · 01</p>
+              <h3 class="card-title">simpleCalc</h3>
+              <p class="card-desc">
+                تطبيق موبايل (APK) مبني بتقنية React Native يُحوّل العملة السورية القديمة إلى الجديدة
+                ويحسب الفروقات بدقة عالية — مثالي لمرحلة التحول الاقتصادي.
+              </p>
+              <div class="tech-badges">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Expo</span>
+                <span class="tech-badge">APK</span>
+              </div>
+              <div class="card-footer-row">
+                <a href="https://drive.google.com/uc?export=download&id=1M3uHL7PNFDfwLEyZ2C9aq_iVTlSj4_vM" class="card-cta">
+                  <i class="fas fa-arrow-left"></i> عرض المشروع
+                </a>
+                <a href="#" class="card-cta" style="border:none; background:none;">
+                  <i class="fab fa-github fa-lg" style="color:var(--text-muted);"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+          <div class="project-card h-100">
+            <div class="card-img-wrap">
+              <img
+                src="image/blog.jpg"
+                alt="The Personal Blog"
+              />
+              <div class="card-img-overlay-tint" style="background: linear-gradient(135deg,#f2a7c3,#7c6ff7);"></div>
+              <div class="card-icon-badge" style="background: linear-gradient(135deg,#f2a7c3,#7c6ff7);">
+                <i class="fas fa-robot"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-project-number">PROJECT · 02</p>
+              <h3 class="card-title">The Personal Blog</h3>
+              <p class="card-desc">
+                صفحة ويب ذكية تحتوي على قائمة مهام متطورة مدمجة بروبوت محادثة AI
+                يساعد المستخدم في إدارة وقته وترتيب أولوياته بذكاء.
+              </p>
+              <div class="tech-badges">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">AI Chatbot</span>
+                <span class="tech-badge">To-Do API</span>
+              </div>
+              <div class="card-footer-row">
+                <a href="https://hisham-alsayyed.github.io/thepersonlblog/" class="card-cta">
+                  <i class="fas fa-arrow-left"></i> عرض المشروع
+                </a>
+                <a href="#" class="card-cta" style="border:none; background:none;">
+                  <i class="fab fa-github fa-lg" style="color:var(--text-muted);"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="240">
+          <div class="project-card h-100">
+            <div class="card-img-wrap">
+              <img
+                src="image/CUP.jpg"
+                alt="World-CUP-Manager"
+              />
+              <div class="card-img-overlay-tint" style="background: linear-gradient(135deg,#5fb8ff,#f2a7c3);"></div>
+              <div class="card-icon-badge" style="background: linear-gradient(135deg,#5fb8ff,#3a9fdc);">
+                <i class="fas fa-trophy"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-project-number">PROJECT · 03</p>
+              <h3 class="card-title">World‑CUP‑Manager</h3>
+              <p class="card-desc">
+                منصة ويب متقدمة لمحاكاة مباريات كأس العالم 2026 — تحلل المسار وتتوقع الفريق
+                الفائز في النهائي وتعرض النتائج بشكل تفاعلي وبصري مبهر.
+              </p>
+              <div class="tech-badges">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge"> Bootstrap 5</span>
+              </div>
+              <div class="card-footer-row">
+                <a href="https://hisham-alsayyed.github.io/World-CUP-Manager/" class="card-cta">
+                  <i class="fas fa-arrow-left"></i> عرض المشروع
+                </a>
+                <a href="#" class="card-cta" style="border:none; background:none;">
+                  <i class="fab fa-github fa-lg" style="color:var(--text-muted);"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="section" id="skills">
+    <div class="container">
+      <div data-aos="fade-up">
+        <p class="section-eyebrow">Expertise</p>
+        <h2 class="section-title">المهارات التقنية</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <div class="skill-name">React.js</div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <div class="skill-name">Node.js</div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+            <div class="skill-name">JavaScript</div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="180">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <div class="skill-name"> Bootstrap</div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="240">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-name">CSS3</div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-item">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <div class="skill-name">SQLServer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-card" data-aos="fade-up">
+        <p class="section-eyebrow text-center">Let's Connect</p>
+        <h2 class="cta-title">هل لديك مشروع في ذهنك؟</h2>
+        <p class="cta-sub">
+          أنا متاح للفرص الجديدة والتعاون على مشاريع طموحة.
+          لا تتردد في التواصل معي لنبني شيئاً رائعاً معاً.
+        </p>
+        <a href="https://wa.me/0936472476" class="btn-primary-grad">
+          <i class="fas fa-paper-plane"></i>
+          ابدأ المحادثة
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    <div class="container">
+      <p class="mb-1">
+        صُمِّم وبُني بـ <i class="fas fa-heart" style="color:var(--accent-3);"></i> بواسطة
+        <a href="#">هشام السيد مححمود</a>
+      </p>
+      <p class="mb-0" style="font-size:0.75rem; opacity:0.6;">
+        © 2026 — HTML5 · CSS3 · Bootstrap 5 . JavaScript
+      </p>
+    </div>
+  </footer>
+
+
+ 
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>

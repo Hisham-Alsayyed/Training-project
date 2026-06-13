@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المدونة البرمجية الذكية | هشام السيد محمود</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body class="fade-in-on-load">
+
+  <div class="theme-toggle-nav">
+    <span id="toggle-label" class="toggle-text">فاتح</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider">
+        <i id="toggle-icon" class="fa-solid fa-sun toggle-icon"></i>
+      </span>
+    </label>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-premium shadow-sm">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none; color: var(--text-primary); margin-left: auto;">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#portfolio">السيرة الذاتية</a></li>
+          <li class="nav-item"><a class="nav-link-premium active" href="blog.html">المدونة الذكية</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#store">متجر المنتجات</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#calculator">الحاسبة الرقمية</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#contact">طلب الاستشارة</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="blog-hero text-center">
+    <div class="container" data-aos="zoom-in">
+      <span class="blog-badge">مقالات تقنية متقدمة</span>
+      <h1 class="hero-title my-3">مدونة جافاسكريبت والمنطق البرمجي</h1>
+      <p class="hero-subtitle mx-auto" style="max-width: 650px;">
+        مساحة هندسية مخصصة لتفكيك الشيفرات، فهم المنطق الخفي خلف محركات المتصفحات، واحتراف بناء بنية برمجية نظيفة.
+      </p>
+      
+     
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row g-4" id="blog-grid">
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="logic" data-aos="fade-up">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-1">
+            <i class="fa-solid fa-code-branch art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المنطق المعماري</span>
+              <span class="meta-date">اليوم</span>
+            </div>
+            <h3 class="blog-article-title">فلسفة الانغلاق (Closures) وحماية الذاكرة</h3>
+            <p class="blog-article-snippet">
+              كيف يمكن لدالة أن تتذكر بيئتها حتى بعد موتها؟ رحلة في أعماق الذاكرة المعجمية لحماية البيانات من التلاعب الخارجي.
+            </p>
+            <div class="full-article-content d-none">
+              <p>مفهوم الانغلاق أو ما يعرف بالـ Closures يمثل واحداً من أعمق المفاهيم الفلسفية في هندسة جافاسكريبت. تخيل أنك تمتلك صندوقاً سرياً داخل غرفة، وعندما تغادر هذه الغرفة يتم تدميرها بالكامل، ولكن لسبب ما، يظل الصندوق السري متصلاً بك أينما ذهبت! هذا بالضبط ما تفعله الدوال الداخلية في جافاسكريبت.</p>
+              <p>عندما نقوم بتعريف دالة داخل دالة أخرى، فإن الدالة الداخلية تحتفظ بـ "حقيبة ظهر" افتراضية تحتوي على جميع المتغيرات والبيانات التي كانت موجودة في الدالة الأب وقت إنشائها. حتى بعد أن تنتهي الدالة الأب من أداء مهمتها وتخرج من مكدس التنفيذ (Call Stack)، تظل بياناتها حية ومتاحة للدالة الداخلية.</p>
+              <p>الأهمية المعمارية لهذا المفهوم تكمن في قدرتنا على خلق ما يسمى بالمتغيرات الخاصة (Private Variables). في لغات البرمجة الكلاسيكية، نستخدم الكلمات المفتاحية لحماية المتغيرات، أما في جافاسكريبت، فنحن نستخدم الـ Closures لبناء جدار عازل يمنع أي كود خارجي من التلاعب بالبيانات الحساسة، مما يضمن استقرار التطبيقات الضخمة ويمنع التداخلات غير المتوقعة.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="async" data-aos="fade-up" data-aos-delay="100">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-2">
+            <i class="fa-solid fa-rotate art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المزامنة والأداء</span>
+              <span class="meta-date">أمس</span>
+            </div>
+            <h3 class="blog-article-title">حلقة الأحداث (Event Loop) والزمن الوهمي</h3>
+            <p class="blog-article-snippet">
+              كيف تقوم لغة أحادية المسار بمعالجة آلاف العمليات في نفس اللحظة؟ التفسير المعماري لعدم تجمد المتصفحات أثناء جلب البيانات.
+            </p>
+            <div class="full-article-content d-none">
+              <p>من الحقائق الصادمة للمبرمجين الجدد أن جافاسكريبت هي لغة أحادية المسار (Single-Threaded)، بمعنى أنها لا تستطيع حرفياً القيام بأكثر من مهمة واحدة في نفس الجزء من الثانية. كيف إذن نتمكن من تشغيل الفيديوهات، استدعاء البيانات من الخوادم، والتفاعل مع نقرات المستخدم في آن واحد دون أن يتجمد المتصفح؟</p>
+              <p>السر يكمن في البيئة المحيطة (Browser Environment) ومفهوم "حلقة الأحداث" أو الـ Event Loop. عندما تواجه جافاسكريبت مهمة ثقيلة ومستهلكة للوقت (مثل جلب بيانات من قاعدة بيانات بعيدة)، فإنها لا تقف مكتوفة الأيدي بانتظارها، بل تقوم بتفويض هذه المهمة إلى واجهات المتصفح (Web APIs) وتستمر في قراءة باقي الكود فوراً.</p>
+              <p>بمجرد أن ينهي المتصفح جلب البيانات، لا يقوم برميها عشوائياً في وجه المتصفح، بل يضعها في طابور انتظار منظم يُسمى (Callback Queue). هنا يأتي دور بطلنا الـ Event Loop، فهو يعمل كحارس مرور يراقب الساحة؛ فإذا وجد أن مكدس العمليات الرئيسي قد أصبح فارغاً ولا يوجد كود يتم تنفيذه حالياً، فإنه يسمح للبيانات القادمة من طابور الانتظار بالدخول وعرض النتيجة للمستخدم، مما يخلق وهماً عبقرياً بتعدد المهام.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="clean" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-3">
+            <i class="fa-solid fa-wand-magic-sparkles art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> الفلسفة البرمجية</span>
+              <span class="meta-date">3 أيام مضت</span>
+            </div>
+            <h3 class="blog-article-title">النقاء الوظيفي والهروب من التداخلات</h3>
+            <p class="blog-article-snippet">
+              البرمجة الوظيفية ليست مجرد تقنية، بل أسلوب حياة للمبرمج. تعرف على الدوال النقية وتأثيرها على استقرار الأنظمة المعقدة.
+            </p>
+            <div class="full-article-content d-none">
+              <p>في عالم هندسة البرمجيات المعقدة، يعتبر تتبع الأخطاء (Debugging) الكابوس الأكبر للمبرمجين. غالباً ما تنشأ هذه الأخطاء المعقدة بسبب ما نسميه "الآثار الجانبية" (Side Effects)، وهي أن تقوم دالة معينة بتغيير حالة تطبيق أو تعديل متغير موجود خارج نطاقها، مما يؤدي إلى سلسلة انهيارات غير متوقعة في أجزاء أخرى من النظام.</p>
+              <p>هنا تبرز قوة الفلسفة الوظيفية (Functional Programming)، والتي تعتمد بشكل أساسي على مبدأ "الدوال النقية" (Pure Functions). الدالة النقية هي دالة تشبه المعادلات الرياضية الصارمة؛ فهي تضمن لك دائماً وأبداً أنها ستعطيك نفس المخرجات طالما أنك أعطيتها نفس المدخلات، وهي تتعهد بعدم لمس أو تغيير أي شيء في العالم الخارجي المحيط بها.</p>
+              <p>هذا النمط المعماري يجبر المبرمج على التفكير بطريقة "التصريح" (Declarative) بدلاً من "الأمر" (Imperative). أنت تصف للبرنامج ما تريده أن يحدث، بدلاً من إعطائه خطوات ميكانيكية لكيفية القيام بذلك. النتيجة هي أكواد برمجية شديدة النظافة، سهلة الاختبار، ومستقرة لدرجة أن نسبة الأخطاء المجهولة المصدر تنخفض إلى الصفر تقريباً.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="logic" data-aos="fade-up">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-4">
+            <i class="fa-solid fa-cubes art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المنطق المعماري</span>
+              <span class="meta-date">5 أيام مضت</span>
+            </div>
+            <h3 class="blog-article-title">لغز الوراثة عبر النماذج الأولية</h3>
+            <p class="blog-article-snippet">
+              لماذا رفضت جافاسكريبت نظام الكلاسات التقليدي؟ شرح مفصل لسلسلة النماذج الأولية (Prototype Chain) وكفاءتها في الذاكرة.
+            </p>
+            <div class="full-article-content d-none">
+              <p>على عكس اللغات الكلاسيكية التي تعتمد على تصميم القوالب (Classes) لإنشاء الكائنات، اختارت جافاسكريبت مساراً هندسياً مختلفاً تماماً يُعرف باسم الوراثة القائمة على النماذج الأولية (Prototypal Inheritance). هذا الاختيار لم يكن صدفة، بل كان قراراً معمارياً يهدف إلى تحقيق أقصى قدر من الديناميكية وتوفير استهلاك الذاكرة العشوائية.</p>
+              <p>في هذا النظام، كل كائن يتم إنشاؤه لا ينسخ الخصائص من قالب جامد، بل يمتلك رابطاً سرياً يربطه بكائن آخر أقدم منه يُسمى "النموذج الأولي". إذا طلبت من الكائن أداء وظيفة معينة ولم يجدها داخله، فإنه لا يظهر لك خطأً فورياً، بل يصعد عبر هذا الرابط السري إلى الكائن الأب ليسأله، وإذا لم يجدها، يصعد للجد، وهكذا في سلسلة متصلة تُعرف بـ Prototype Chain.</p>
+              <p>هذا التصميم العبقري يعني أننا لسنا بحاجة لنسخ الدوال آلاف المرات لكل مستخدم أو عنصر جديد، بل يكفي أن نضع الوظيفة المشتركة في كائن مركزي واحد، ونجعل جميع العناصر الأخرى ترث القدرة على الوصول إليها كعقارات مشتركة، مما يجعل التطبيق أخف وزناً وأسرع استجابة في بيئات الويب المحدودة الموارد.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="async" data-aos="fade-up" data-aos-delay="100">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-5">
+            <i class="fa-solid fa-hourglass-half art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المزامنة والأداء</span>
+              <span class="meta-date">أسبوع مضى</span>
+            </div>
+            <h3 class="blog-article-title">تحرير العقل من جحيم الاستدعاءات</h3>
+            <p class="blog-article-snippet">
+              تطور الآليات غير المتزامنة من عصر الـ Callbacks المظلم، وصولاً إلى بساطة وجمال نمط Async/Await.
+            </p>
+            <div class="full-article-content d-none">
+              <p>في البدايات الأولى لتطوير الويب، كانت الطريقة الوحيدة للتعامل مع العمليات التي تستغرق وقتاً هي تمرير دالة تُسمى (Callback) ليتم تنفيذها لاحقاً. ومع تعقيد التطبيقات واحتياجنا لتنفيذ عمليات تعتمد على بعضها البعض بشكل متسلسل، وجد المبرمجون أنفسهم محاصرين في مثلثات متداخلة من الأكواد عُرفت لاحقاً بـ "جحيم الاستدعاءات" (Callback Hell)، حيث أصبح قراءة الكود أشبه بفك طلاسم معقدة.</p>
+              <p>أدرك مهندسو اللغة هذه المعضلة، فابتكروا مفهوم "الوعود" (Promises). الوعد هو كفالة برمجية بأن العملية المستقبلية إما أن تنجح وتجلب البيانات، أو تفشل وتجلب سبب الخطأ. هذا النظام حوّل الكود المتداخل إلى كود متسلسل عمودياً يسهل تتبعه، لكنه كان لا يزال يتطلب الكثير من الكلمات المفتاحية وربط السلاسل.</p>
+              <p>حتى وصلنا إلى قمة النضج المعماري مع بنية Async/Await. هذه البنية لا تضيف قدرات تقنية جديدة للغة، بل هي مجرد غطاء تجميلي ونحوي فوق نظام الوعود. إنها تسمح للمبرمج بكتابة كود غير متزامن يقرأ ويتدفق وكأنه كود خطي عادي خطوة بخطوة. هذا التطور التاريخي لم يُحسن فقط من جمالية الأكواد، بل قلل بشكل هائل من الأخطاء المنطقية وسهل عملية اكتشاف الثغرات ومعالجتها.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="logic" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-6">
+            <i class="fa-solid fa-compass art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المنطق المعماري</span>
+              <span class="meta-date">أسبوعين مضت</span>
+            </div>
+            <h3 class="blog-article-title">معضلة الكلمة المفتاحية (This) وسياق التنفيذ</h3>
+            <p class="blog-article-snippet">
+              لماذا يتصرف هذا المؤشر بذكاء حيناً وبغباء أحياناً أخرى؟ فهم قواعد الربط الأربعة التي تحكم سلوك سياق التنفيذ.
+            </p>
+            <div class="full-article-content d-none">
+              <p>إذا سألت أي مطور محترف عن أكثر الأشياء التي سببت له صداعاً في بداياته، ستكون الإجابة حتماً هي سلوك الكلمة المفتاحية `this`. في اللغات الكلاسيكية، هذه الكلمة تشير دائماً وابداً إلى الكائن (Class) الذي تتواجد فيه. ولكن في جافاسكريبت، الأمر يشبه حرباء تتغير حسب البيئة المحيطة.</p>
+              <p>القاعدة الذهبية التي يغفل عنها الكثيرون هي أن قيمة هذا المؤشر لا تتحدد أبداً بمكان كتابة الدالة في الملف البرمجي، بل تتحدد حصراً في "لحظة" استدعاء هذه الدالة وكيفية استدعائها (Call-site). هناك أربع طرق أساسية يفسر بها المحرك هذا المؤشر: الربط التلقائي الذي يعيدنا للكائن العالمي، والربط الضمني الذي يشير للكائن الذي نادى الدالة، والربط الصريح الذي يفرضه المبرمج بالقوة، وأخيراً الربط الإنشائي.</p>
+              <p>ولحل هذه المعضلة والفوضى، تم ابتكار الدوال السهمية (Arrow Functions) في الإصدارات الحديثة. هذه الدوال لا تمتلك مؤشر `this` خاص بها على الإطلاق! بل تتصرف كعدسة شفافة تسمح للمؤشر الموجود في البيئة الخارجية بالمرور عبرها. فهم هذه الميكانيكية الدقيقة هو الخط الفاصل بين المبرمج المبتدئ والمهندس القادر على بناء واجهات تفاعلية معقدة دون أخطاء في تحديد هويات الكائنات.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="clean" data-aos="fade-up">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-1">
+            <i class="fa-solid fa-triangle-exclamation art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> الفلسفة البرمجية</span>
+              <span class="meta-date">شهر مضى</span>
+            </div>
+            <h3 class="blog-article-title">الإكراه على الأنواع (Type Coercion) ومخاطره</h3>
+            <p class="blog-article-snippet">
+              الخوارزميات الخفية التي تجعل لغة البرمجة تتخذ قرارات نيابة عنك، وكيف تحمي كودك من التحويلات الكارثية للبيانات.
+            </p>
+            <div class="full-article-content d-none">
+              <p>تتميز جافاسكريبت بأنها لغة مرنة ومتسامحة جداً مع أنواع البيانات (Dynamically Typed). هذه المرونة تأتي بضريبة خفية تسمى "الإكراه على الأنواع" (Type Coercion). عندما تطلب من المحرك مقارنة رقم بنص، أو جمع مصفوفة مع كائن، فإنه لا يرفض الطلب، بل يحاول بشتى الطرق تحويل أحد الطرفين ليتناسب مع الآخر لإتمام العملية.</p>
+              <p>هذا التدخل الصامت من المحرك يتم بناءً على قواعد معقدة ومدفونة عميقاً في مواصفات اللغة (ECMAScript). أحياناً يقرر تحويل القيم إلى نصوص، وأحياناً إلى أرقام، وفي حالات أخرى إلى قيم منطقية (Boolean). هذا التسامح قد يؤدي إلى نتائج تبدو منطقية للمحرك ولكنها كارثية رياضياً وبرمجياً في المنطق البشري.</p>
+              <p>لذا، تعتبر واحدة من أهم ممارسات الكود النظيف هي التوقف التام عن استخدام المساواة المرنة والتطبع على استخدام "المساواة الصارمة" في جميع المقارنات المنطقية. المساواة الصارمة تمنع المحرك من التدخل وتحويل الأنواع، وتفرض تطابقاً حقيقياً في القيمة والنوع معاً، مما يمنع تسرب أخطاء خطيرة جداً، خاصة في تطبيقات الدفع الإلكتروني والأنظمة المالية.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="async" data-aos="fade-up" data-aos-delay="100">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-2">
+            <i class="fa-solid fa-gauge-high art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المزامنة والأداء</span>
+              <span class="meta-date">شهرين مضت</span>
+            </div>
+            <h3 class="blog-article-title">حماية واجهات المستخدم: Debounce و Throttle</h3>
+            <p class="blog-article-snippet">
+              تقنيات حيوية لترويض المستخدمين المندفعين وحماية خوادمك من الانهيار تحت وطأة الطلبات المتكررة وغير المبررة.
+            </p>
+            <div class="full-article-content d-none">
+              <p>تخيل واجهة بحث فورية تقوم بإرسال طلب للخادم مع كل حرف يكتبه المستخدم. إذا كان المستخدم يكتب بسرعة، فهذا يعني عشرات الطلبات في ثوانٍ معدودة لمعلومة غير مكتملة، مما يؤدي إلى استنزاف موارد الخادم والتسبب في بطء شديد في واجهة المستخدم. هنا يتدخل مفهوم الـ Debouncing لإنقاذ الموقف.</p>
+              <p>فكرة الـ Debouncing ببساطة هي أن نأمر المتصفح بتأجيل تنفيذ الدالة، وتصفير العداد في كل مرة يقوم فيها المستخدم بحدث جديد. النتيجة هي أن الدالة لن تعمل إلا بعد أن "يتوقف" المستخدم تماماً عن الطباعة أو الحركة لمدة زمنية محددة. إنها تقنية تعتمد على استراتيجية الانتظار والمراقبة قبل التصرف.</p>
+              <p>على الجانب الآخر، لدينا تقنية الـ Throttling، وهي لا تعتمد على توقف المستخدم، بل تضع سقفاً أمنياً لمعدل التنفيذ. فمثلاً عند تمرير شريط الصفحة (Scrolling)، نأمر النظام بأن ينفذ الدالة التابعة لهذا الحدث مرة واحدة فقط كل نصف ثانية، مهما كان عدد المرات التي يحرك فيها المستخدم الشاشة. دمج هاتين التقنيتين في الواجهات هو ما يفصل بين المواقع المبتدئة والمواقع ذات الأداء الاحترافي العالي.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="logic" data-aos="fade-up" data-aos-delay="200">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-3">
+            <i class="fa-solid fa-diagram-project art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> المنطق المعماري</span>
+              <span class="meta-date">3 أشهر مضت</span>
+            </div>
+            <h3 class="blog-article-title">المصفوفات وهياكل البيانات المعقدة</h3>
+            <p class="blog-article-snippet">
+              خلف كواليس المصفوفات، كيف توفر لك لغة الويب القدرة على محاكاة طوابير الانتظار وأكوام الذاكرة بكفاءة ثابتة.
+            </p>
+            <div class="full-article-content d-none">
+              <p>المصفوفات في جافاسكريبت ليست مجرد صناديق متجاورة في الذاكرة لتخزين القيم كما في لغات البرمجة الصارمة (مثل C). إنها في الواقع كائنات (Objects) ديناميكية بالغة التعقيد، تم هندستها لتتوسع وتتقلص تلقائياً، وتسمح بتخزين أنواع بيانات مختلفة داخل نفس الهيكل دون أن ينكسر النظام.</p>
+              <p>هذه الطبيعة المرنة تسمح لنا باستخدام المصفوفات لبناء هياكل بيانات (Data Structures) متقدمة جداً ومحاكاتها برمجياً دون الحاجة لكتابة كلاسات مطولة. على سبيل المثال، يمكننا محاكاة بنية المكدس (Stack) التي تعتمد على مبدأ "الداخل أخيراً يخرج أولاً" (LIFO) بمجرد استخدام الدوال المدمجة البسيطة للإضافة والحذف من النهاية.</p>
+              <p>وبالمثل، يمكن محاكاة نظام طوابير المعالجة (Queues) القائم على مبدأ "الداخل أولاً يخرج أولاً" (FIFO). فهم هذه الآليات الخفية والدوال المدمجة، وتأثيراتها على الذاكرة، يعطي المطور القدرة على معالجة ملايين السجلات في الواجهة الأمامية دون الإخلال بسرعة استجابة الصفحة أو إرهاق معالج المستخدم.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6 col-lg-4 blog-item-card" data-category="clean" data-aos="fade-up">
+        <article class="blog-card-meta">
+          <div class="card-art-preview dynamic-gradient-4">
+            <i class="fa-solid fa-memory art-icon"></i>
+          </div>
+          <div class="card-body-content">
+            <div class="meta-info d-flex justify-content-between mb-3">
+              <span class="meta-tag"><i class="far fa-folder"></i> الفلسفة البرمجية</span>
+              <span class="meta-date">عام مضى</span>
+            </div>
+            <h3 class="blog-article-title">إدارة الذاكرة والتخلص من النفايات البرمجية</h3>
+            <p class="blog-article-snippet">
+              كيف يعمل مجمع القمامة (Garbage Collector)؟ وكيف تحمي تطبيقك من ثقوب الذاكرة الخفية التي تؤدي لانهيار المتصفح.
+            </p>
+            <div class="full-article-content d-none">
+              <p>على عكس لغات البرمجة القديمة التي تجبر المهندس على حجز الذاكرة وتحريرها يدوياً مع كل متغير جديد، تأتي لغات الويب الحديثة بنظام آلي بالغ الذكاء يُسمى "مجمع النفايات" (Garbage Collector). هذا النظام يعمل كحارس صامت في الخلفية، يراقب البيانات والمتغيرات التي يتم استهلاكها أثناء تشغيل التطبيق.</p>
+              <p>تعتمد آلية عمل هذا الحارس على خوارزمية ذكية تعرف بـ (Mark and Sweep). فهو ينطلق من الجذر الأساسي للمتصفح (الكائن العالمي)، ويقوم برسم خطوط وهمية لكل المتغيرات والكائنات المرتبطة به. أي كائن أو بيانات لا يصل إليها هذا الخط، تُعتبر "بيانات ميتة" لا يمكن الوصول إليها، فيقوم فوراً بحذفها وتحرير المساحة التي كانت تحتلها في الذاكرة العشوائية.</p>
+              <p>رغم هذا الذكاء، يقع العديد من المطورين في فخاخ كارثية تسمى "تسريب الذاكرة" (Memory Leaks). يحدث هذا التسريب عندما ننسى إيقاف معالجات الأحداث (Event Listeners) المخفية في الخلفية، أو عند إنشاء انغلاقات (Closures) تحتفظ بكائنات ضخمة إلى الأبد دون قصد. النتيجة تراكم البيانات في الذاكرة الحية بمرور الوقت حتى يتوقف المتصفح عن الاستجابة تماماً، مما يبرز أهمية الكتابة النظيفة والتدمير الواعي للعناصر بعد انتهاء الحاجة إليها.</p>
+            </div>
+            <button class="btn-read-more">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="modal fade" id="articleReaderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content fluent-modal-body">
+        
+        <div class="reading-progress-bar" id="modalProgress"></div>
+        
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body pt-0 px-4 px-md-5" id="modal-article-target">
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container text-center">
+      <p class="mb-1">صُمِّم وبُني بـ <i class="fas fa-heart" style="color:#c17f44;"></i> بواسطة هشام السيد محمود</p>
+      <p class="mb-0" style="font-size:0.75rem; opacity:0.6;">© 2026 — هندسة واجهات المستخدم المتطورة</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <script src="script.js"></script> 
+  <script src="blog.js"></script>  
+</body>
+</html>

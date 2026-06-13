@@ -1,0 +1,161 @@
+
+    body {
+      padding-top: 100px;
+    }
+
+    .navbar-premium {
+      background: rgba(245, 237, 227, 0.8) !important; 
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(224, 169, 103, 0.2);
+      padding: 12px 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    [data-theme="dark"] .navbar-premium {
+      background: rgba(35, 24, 16, 0.8) !important;
+      border-bottom: 1px solid rgba(193, 127, 68, 0.2);
+    }
+
+    .navbar-brand-hub {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-link-premium {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 8px 18px !important;
+      border-radius: 30px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-link-premium:hover {
+      color: var(--text-primary) !important;
+      background: rgba(224, 169, 103, 0.15);
+    }
+
+    .nav-link-premium.active {
+      color: #2c1e16 !important;
+      background: var(--gradient-accent);
+      box-shadow: 0 4px 12px rgba(224, 169, 103, 0.2);
+    }
+
+    .project-section {
+      padding: 100px 0;
+      border-bottom: 1px solid rgba(224, 169, 103, 0.15);
+      position: relative;
+    }
+    
+    .project-section:nth-of-type(even) {
+      background: rgba(245, 237, 227, 0.3);
+    }
+    [data-theme="dark"] .project-section:nth-of-type(even) {
+      background: rgba(35, 24, 16, 0.2);
+    }
+
+    .project-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title-hub {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .section-desc-hub {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .premium-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(224, 169, 103, 0.25);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 12px 35px rgba(44, 30, 22, 0.03);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-card:hover {
+      transform: translateY(-10px); 
+      border-color: var(--primary-color);
+      box-shadow: 0 25px 50px rgba(193, 127, 68, 0.12); 
+    }
+
+   
+    .premium-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-accent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .premium-card:hover::before {
+      opacity: 1;
+    }
+
+    .premium-icon-box {
+      width: 70px;
+      height: 70px;
+      background: rgba(224, 169, 103, 0.12);
+      color: var(--accent-dark);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 28px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .premium-card:hover .premium-icon-box {
+      background: var(--gradient-accent);
+      color: #2c1e16;
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .premium-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--text-primary);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .premium-cta:hover {
+      background: var(--gradient-accent);
+      border-color: transparent;
+      color: #2c1e16 !important;
+      box-shadow: 0 8px 20px rgba(224, 169, 103, 0.25);
+    }
+
+    .premium-cta i {
+      transition: transform 0.3s ease;
+    }
+
+    .premium-cta:hover i {
+      transform: translateX(-6px);
+    }

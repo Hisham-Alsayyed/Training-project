@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>متجر التقنية المتقدمة | هشام السيد محمود</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="store.css" />
+</head>
+
+<body class="fade-in-on-load">
+
+  <div class="theme-toggle-nav">
+    <span id="toggle-label" class="toggle-text">فاتح</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider">
+        <i id="toggle-icon" class="fa-solid fa-sun toggle-icon"></i>
+      </span>
+    </label>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-premium shadow-sm">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none; color: var(--text-primary); margin-left: auto;">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#portfolio">السيرة الذاتية</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="blog.html">المدونة الذكية</a></li>
+          <li class="nav-item"><a class="nav-link-premium active" href="store.html">متجر المنتجات</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#calculator">الحاسبة الرقمية</a></li>
+          <li class="nav-item"><a class="nav-link-premium" href="index.html#contact">طلب الاستشارة</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastPlacement"></div>
+
+  <header class="store-hero text-center">
+    <div class="container" data-aos="zoom-in">
+      <span class="store-badge">معدات المطورين الاحترافية</span>
+      <h1 class="hero-title my-3">متجر العتاد والتقنية</h1>
+      <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+        اختر أفضل الأجهزة والملحقات المصممة لزيادة إنتاجيتك، وتابع مجموع الفاتورة وتحديث السلة الفوري في الأسفل.
+      </p>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <div class="row g-4" id="products-grid">
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor1.png" alt="حاسوب محمول" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$1200</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">حاسوب محمول احترافي</h3>
+            <p class="product-desc">شاشة 16 بوصة، معالج قوي لعمليات المزامنة والبرمجة المعقدة، وذاكرة عشوائية 32GB.</p>
+            <button class="btn-add-cart" data-name="حاسوب محمول احترافي" data-price="1200">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor6.jpg" alt="لوحة مفاتيح ميكانيكية" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$85</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">لوحة مفاتيح ميكانيكية</h3>
+            <p class="product-desc">مفاتيح مريحة وصامتة للكتابة الطويلة والسريعة مع إضاءة خلفية مخصصة للعمل الليلي.</p>
+            <button class="btn-add-cart" data-name="لوحة مفاتيح ميكانيكية" data-price="85">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor5.jpg" alt="ماوس لاسلكي" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$60</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">ماوس ألعاب لاسلكي</h3>
+            <p class="product-desc">دقة استشعار عالية جداً مع أزرار جانبية مخصصة لتسريع الاختصارات البرمجية.</p>
+            <button class="btn-add-cart" data-name="ماوس ألعاب لاسلكي" data-price="60">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor4.jpg" alt="شاحن سريع" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$35</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">شاحن مكتبي سريع 65W</h3>
+            <p class="product-desc">محول طاقة متعدد المنافذ بتقنية GaN لشحن اللابتوب والهاتف معاً بأمان ذكي كامل.</p>
+            <button class="btn-add-cart" data-name="شاحن مكتبي 65W" data-price="35">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor2.png" alt="شاشة عرض" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$450</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">شاشة عرض بدقة 4K</h3>
+            <p class="product-desc">شاشة بمقاس 27 بوصة تقدم ألواناً فائقة الدقة والوضوح ومريحة جداً للعين أثناء فترات التركيز.</p>
+            <button class="btn-add-cart" data-name="شاشة عرض 4K" data-price="450">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="image/stor3.png" alt="سماعات رأس" class="product-img">
+            <div class="img-overlay"></div>
+            <span class="product-price">$150</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">سماعات عازلة للضجيج</h3>
+            <p class="product-desc">تقنية العزل النشط الممتازة (ANC) لمساعدتك على الانفصال تماماً والتركيز في عملك.</p>
+            <button class="btn-add-cart" data-name="سماعات عازلة للضجيج" data-price="150">
+              أضف إلى السلة <i class="fas fa-cart-plus ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5" data-aos="fade-up">
+      <div class="col-12">
+        <div class="cart-inline-summary">
+          <div class="summary-info">
+            <div class="summary-item">
+              <i class="fas fa-shopping-basket"></i>
+              <span>العناصر المختارة:</span>
+              <strong id="inlineCartCount">0</strong>
+            </div>
+            <div class="summary-item">
+              <i class="fas fa-credit-card"></i>
+              <span>المجموع الإجمالي:</span>
+              <strong id="inlineCartTotal">$0</strong>
+            </div>
+          </div>
+          <button class="btn-clear-cart" id="inlineClearBtn">
+            <i class="fas fa-trash-alt me-1"></i> إلغاء الفاتورة
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-4">
+    <div class="container text-center">
+      <p class="mb-1">صُمِّم وبُني بـ <i class="fas fa-heart" style="color:#c17f44;"></i> بواسطة هشام السيد محمود</p>
+      <p class="mb-0" style="font-size:0.75rem; opacity:0.6;">© 2026 — هندسة واجهات المستخدم المتطورة</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script> 
+  <script src="store.js"></script>  
+</body>
+</html>
